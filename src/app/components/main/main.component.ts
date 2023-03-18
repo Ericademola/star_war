@@ -9,6 +9,7 @@ import {ApiService} from "../../services/api/api.service.";
 export class MainComponent implements OnInit {
 
   public allPeople: any = [];
+  public clickedPerson: any = null;
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -33,4 +34,12 @@ export class MainComponent implements OnInit {
     })
   }
 
+  public openDetailsModal(person: any) {
+    console.log('Persom', person);
+    this.clickedPerson = person;
+  }
+
+  public closeModal() {
+    this.clickedPerson = null;
+  }
 }

@@ -6,45 +6,42 @@
       <div class="card" style="min-height: 250px">
         <img class="card-img-top" [src]="person.image" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-      </div>
-    </div>
-<!--
-    <div class="col-sm-4 p-3 text-white">
-      <div class="card" style="width:400px">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
-      </div>
-    </div>
+          <h4 class="card-title">{{person.name}}</h4>
+          <p class="card-text">{{person.gender}}</p>
+          <p class="card-text">{{person.birth_year}}</p>
+          <button type="button" class="btn btn-primary" (click)="openDetailsModal(person)">
+            See Profile
+          </button>
 
-    <div class="col-sm-4 p-3 text-white">
-      <div class="card" style="width:400px">
-        <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
         </div>
       </div>
-    </div>-->
+    </div>
 
   </div>
 </section>
 
 
-<!--<div class="accordion">-->
-<!--  <div class="">-->
-<!--    <div class="card" *ngFor="let person of allPeople">-->
-<!--      {{person?.name}}-->
-<!--      {{person?.gender}}-->
-<!--    </div>-->
-<!--    <-->
-<!--  </div>button class="btn btn-success btn-lg">View Details</button>-->
-<!--</div>-->
+<!-- The Modal -->
+<div class="modal " id="viewDetail" *ngIf="clickedPerson" style="display: block;">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{clickedPerson.name}}</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        hgfdfghj
+      </div>
+
+    </div>
+  </div>
+</div>
