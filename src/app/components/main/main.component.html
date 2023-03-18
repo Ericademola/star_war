@@ -18,6 +18,13 @@
     </div>
 
   </div>
+
+  <ul class="pagination pagination-lg justify-content-center" style="margin-top: 30px;">
+    <li class="page-item" [ngClass]="!prevNumber ? 'disabled' : ''"><a class="page-link" (click)="getNext('prev')">Previous</a></li>
+
+    <li class="page-item" [ngClass]="!nextNumber ? 'disabled' : ''"><a class="page-link" (click)="getNext('next')">Next</a></li>
+  </ul>
+
 </section>
 
 
@@ -39,7 +46,7 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        hgfdfghj
+        Thanks For Viewing.
       </div>
 
     </div>

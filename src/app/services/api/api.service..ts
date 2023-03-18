@@ -99,7 +99,7 @@ export class ApiService extends RestfulHttpService {
    * @param {HttpParams} params
    * @returns {Observable<any>}
    */
-  getRequest(api: string, method?: string, params?: HttpParams): Observable<any> {
+  getRequest(api: string, method?: string | null, params?: HttpParams): Observable<any> {
     let ENDPOINT;
     if (method) {
       ENDPOINT = env.API_URL + '/' + api + '/' + method;
