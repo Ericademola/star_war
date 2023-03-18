@@ -1,0 +1,12 @@
+section {
+  background-color: aquamarine;
+  /*padding: 10px 20px;*/
+}
+
+h1 {
+  color: red;
+}
+
+.col-detail {
+  align-items: center;
+}

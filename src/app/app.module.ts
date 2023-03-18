@@ -7,6 +7,9 @@ import { HomeComponent } from './views/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
+import {RestfulHttpService} from "./services/httpService/service.service";
+import {ApiService} from "./services/api/api.service.";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { MainComponent } from './components/main/main.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService, RestfulHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
